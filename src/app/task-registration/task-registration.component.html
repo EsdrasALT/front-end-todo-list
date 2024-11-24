@@ -1,0 +1,71 @@
+<div class="task-registration-container">
+  <h2>Cadastro de Tarefa</h2>
+  <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+    <div class="form-group">
+      <label for="title">Título:</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        class="form-control"
+        [(ngModel)]="task.title"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descrição:</label>
+      <textarea
+        id="description"
+        name="description"
+        class="form-control"
+        [(ngModel)]="task.description"
+        required
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="startAt">Data de Início:</label>
+      <input
+        type="datetime-local"
+        id="startAt"
+        name="startAt"
+        class="form-control"
+        [(ngModel)]="task.startAt"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="endAt">Data de Término:</label>
+      <input
+        type="datetime-local"
+        id="endAt"
+        name="endAt"
+        class="form-control"
+        [(ngModel)]="task.endAt"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="priority">Prioridade:</label>
+      <select
+        id="priority"
+        name="priority"
+        class="form-control"
+        [(ngModel)]="task.priority"
+        required
+      >
+        <option value="">Selecione</option>
+        <option value="Baixa">Baixa</option>
+        <option value="Média">Média</option>
+        <option value="Alta">Alta</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!taskForm.valid">
+      Cadastrar
+    </button>
+  </form>
+</div>

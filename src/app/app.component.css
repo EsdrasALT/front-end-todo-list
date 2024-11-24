@@ -1,0 +1,59 @@
+.app-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1em 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  margin: 1em 0;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #45a049;
+}
+
+.nav-links .active {
+  background-color: #2e7d32;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nav-links button.active {
+  color: #0056b3; /* Cor para quando o botão estiver ativo */
+}
