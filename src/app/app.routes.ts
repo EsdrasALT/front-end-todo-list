@@ -3,17 +3,14 @@ import { UserRegistrationComponent } from './user-registration/user-registration
 import { UserLoginComponent } from './user-login/user-login.component';
 import { TaskRegistrationComponent } from './task-registration/task-registration.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ObjectiveRegistrationComponent } from './objective-registration/objective-registration.component';
+import { TaskListComponent } from './task-list/task-list.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: UserLoginComponent },
   { path: 'user-registration', component: UserRegistrationComponent },
-  { path: 'objective-registration', component: ObjectiveRegistrationComponent },
-  {
-    path: 'objective-registration/tasks',
-    component: TaskRegistrationComponent,
-  },
+  { path: 'tasks-registration', component: TaskRegistrationComponent},
+  { path: 'task-list', component: TaskListComponent },
   { path: '**', component: NotFoundComponent }
   // Outras rotas, se houver
 ];

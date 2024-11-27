@@ -1,0 +1,21 @@
+<h2>Lista de Tarefas</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Tarefa</th>
+      <th>Status</th>
+      <th>Previsão</th>
+      <th>Edita</th>
+      <th>Deleta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tarefa of tarefas">
+      <td>{{ tarefa.nome }}</td>
+      <td>{{ tarefa.status }}</td>
+      <td>{{ tarefa.previsao | date: 'dd/MM/yyyy' }}</td>
+      <td><button (click)="editarTarefa(tarefa)" class="btn btn-primary">Edita</button></td>
+      <td><button (click)="deletarTarefa(tarefa)" class="btn btn-danger">Deleta</button></td>
+    </tr>
+  </tbody>
+</table>
